@@ -10,3 +10,14 @@ export const getBanner = () => {
     }
   })
 }
+export const getIndexRecomment = () => {
+  return request({
+    url: '/api/comic_v2/customerview',
+    params: {
+      apptype: 8,
+      appversion: 1.0,
+      channel: 'web-app',
+      viewtype: 1
+    }
+  })
+}
