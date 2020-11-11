@@ -1,29 +1,29 @@
 <template>
   <nav class="index-nav">
-    <a href="javascript:;">
+    <router-link to = '/Classify'>
       <div class="nav-item">
         <i class="iconfont icon-icon_addmessage"></i>
         <p class="nav-text font-24">分类</p>
       </div>
-    </a>
-    <a href="javascript:;">
+    </router-link>
+    <router-link to = '/Ranking'>
       <div class="nav-item">
         <i class="iconfont icon-icon_addresslist"></i>
         <p class="nav-text font-24">排行</p>
       </div>
-    </a>
-    <a href="javascript:;">
+    </router-link>
+    <router-link to = '/Vip'>
       <div class="nav-item">
         <i class="iconfont icon-icon_addressbook"></i>
         <p class="nav-text font-24">VIP专区</p>
       </div>
-    </a>
-    <a href="javascript:;">
+    </router-link>
+    <router-link to = '/Hello/History'>
       <div class="nav-item">
         <i class="iconfont icon-icon_at"></i>
         <p class="nav-text font-24">历史</p>
       </div>
-    </a>
+    </router-link>
   </nav>
 </template>
 

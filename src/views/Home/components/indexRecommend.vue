@@ -57,7 +57,7 @@
           <p class="item-name font-30">{{ childItem.bigbook_name }}</p>
           <p class="item-hot font-24">
             人气：
-            <span class="hot-hot">{{ childItem.bigbookview | formatYi | valueB }}</span>
+            <span class="hot-hot">{{ childItem.bigbookview | formatYi }}</span>
           </p>
           <p class="item-text font-24">{{ childItem.brief }}</p>
         </div>
@@ -83,9 +83,6 @@ export default {
       } else {
         return `${(value / Math.pow(10, 4)).toFixed(2)}万`
       }
-    },
-    valueB (value) {
-      return value
     }
   }
 }

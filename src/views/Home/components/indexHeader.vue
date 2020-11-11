@@ -56,7 +56,7 @@ export default {
   .header-search {
     width: 25px;
     height: 25px;
-    background: url(~@/assets/icon/header-search.png);
+    background: url(~@/assets/icon/icon-search.png);
     background-size: 100%;
   }
 }
