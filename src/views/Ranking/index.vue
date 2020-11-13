@@ -3,7 +3,7 @@
     <NormalHeader title="排行榜"></NormalHeader>
     <div class="classify-main">
       <HeaderType :types = 'types' @abc = 'fn2'></HeaderType>
-      <CartoonList :Lists = 'lists'></CartoonList>
+      <CartoonList :Lists = 'lists' :isShow = 'true'></CartoonList>
     </div>
   </div>
 </template>
@@ -56,8 +56,6 @@ export default {
         } else {
           alert(res.code_msg)
         }
-      }).catch(err => {
-        console.log(err)
       })
     },
     fn2 (payload) {

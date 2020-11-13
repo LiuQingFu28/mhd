@@ -1,7 +1,7 @@
 <template>
   <div class="page-home">
+    <indexHeader></indexHeader>
     <div class="index-main">
-      <indexHeader></indexHeader>
       <Swiper ref="xxx" :autoplay="autoplay" v-if="msg.length">
         <SwiperItem v-for="item in msg" :key="item.id"
           ><img :src="item.imageurl" :alt="item.description"
@@ -72,9 +72,6 @@ export default {
             alert(res.code_msg)
           }
         })
-        .catch(err => {
-          alert('网络异常，请稍后：' + err)
-        })
     },
     getIndexRecomment () {
       getIndexRecomment()
@@ -86,9 +83,6 @@ export default {
             // 在这里我们先通过 alert 进行报错，后期 我们可以用一下 vant 组件库的组件
             alert(res.code_msg)
           }
-        })
-        .catch(err => {
-          alert('网络异常，请稍后：' + err)
         })
     }
   },

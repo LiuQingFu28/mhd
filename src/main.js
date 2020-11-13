@@ -2,8 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { Toast } from 'vant'
 import './assets/styles/base.scss'
-
+Vue.use(Toast)
 Vue.config.productionTip = false
 Vue.filter('formatYi', (value) => {
   var Yi = Math.pow(10, 8)

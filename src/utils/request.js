@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Toast } from 'vant'
 const instance = axios.create({
   baseURL: 'http://localhost:8080',
   timeout: 5000
@@ -18,6 +19,11 @@ instance.interceptors.response.use(function (response) {
   return response.data
 }, function (error) {
   // 对响应错误做点什么
+  Toast.fail({
+    message: '加载失败，请稍后重试',
+    duration: 3000,
+    closeOnClick: true
+  })
   return Promise.reject(error)
 })
 export default instance

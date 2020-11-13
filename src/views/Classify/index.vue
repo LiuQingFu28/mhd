@@ -48,8 +48,6 @@ export default {
         } else {
           alert(res.code_msg)
         }
-      }).catch(err => {
-        console.log(err)
       })
     },
     fn1 (payload) {
@@ -63,8 +61,6 @@ export default {
         } else {
           alert(res.code_msg)
         }
-      }).catch(err => {
-        console.log(err)
       })
     }
   },

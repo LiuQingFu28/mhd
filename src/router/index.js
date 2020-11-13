@@ -12,7 +12,11 @@ import Register from '../views/Resigter'
 import Search from '../views/Search'
 import SearchResult from '../views/SearchResult'
 import Vip from '../views/Vip'
+import City from '../views/city'
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 Vue.use(VueRouter)
+nprogress.configure({ showSpinner: false })
 const router = new VueRouter({
   routes: [
     {
@@ -72,7 +76,18 @@ const router = new VueRouter({
     {
       path: '/vip',
       component: Vip
+    },
+    {
+      path: '/city',
+      component: City
     }
   ]
+})
+router.beforeEach((to, from, next) => {
+  nprogress.start()
+  next()
+})
+router.afterEach((to, from) => {
+  nprogress.done()
 })
 export default router
